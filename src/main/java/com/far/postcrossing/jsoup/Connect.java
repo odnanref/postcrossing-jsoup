@@ -45,6 +45,7 @@ public class Connect {
         } catch (IOException e) {
             e.printStackTrace();
             // log error
+            System.exit(0);
         }
         Log.d(this.getClass().toString(), "LA VAI" + doc.getElementById(csrf_name).val().toString());
 
@@ -53,7 +54,8 @@ public class Connect {
 
     public Connection fetch(String URI, String meth) {
         Log.d(this.getClass().toString(), "Connect fetch " + URI.toString() + " method " + meth);
-
+//        System.setProperty("javax.net.ssl.trustStore", "/path/to/web2.uconn.edu.jks");
+    
         conn = Jsoup.connect(URI);
         Log.d(this.getClass().toString(), "COnn " + conn.toString());
 
@@ -76,4 +78,5 @@ public class Connect {
     {
         return this.conn;
     }
+    
 }
