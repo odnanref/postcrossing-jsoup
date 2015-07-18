@@ -8,6 +8,11 @@
   <name>postcrossing-jsoup</name>
   <url>http://maven.apache.org</url>
   <build>
+	  <resources>
+		<resource>
+		    <directory>src/main/resources</directory>
+		</resource>
+	</resources>
   <plugins>
     <plugin>
     <!-- Build an executable JAR -->
